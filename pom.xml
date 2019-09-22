@@ -4,11 +4,43 @@
     <groupId>thinking.springboot.com</groupId>
     <artifactId>thinking-springboot-demo</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <name>thinking-springboot-demo</name>
     <modules>
         <module>thinking-springboot-beginning</module>
         <module>thinking-spring2.5.6-sample</module>
     </modules>
+    <properties>
+        <!-- Spring Framework 5.0 最新的版本 -->
+        <!-- 子模块工程根据版本需要，调整 spring.version 属性 -->
+        <spring.version>5.1.9.RELEASE</spring.version>
+    </properties>
+    <dependencyManagement>
 
+        <dependencies>
+
+            <!-- Spring 上下文依赖 -->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+            <!-- Spring 事务依赖 -->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-tx</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+            <!-- Spring Web MVC 依赖 -->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-webmvc</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+        </dependencies>
+
+    </dependencyManagement>
 </project>

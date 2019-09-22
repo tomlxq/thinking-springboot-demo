@@ -1,5 +1,5 @@
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import thinking.spring256.com.sample.ChineseNameRepository;
+import thinking.in.spring.sample.ChineseNameRepository;
 
 /**
  * 功能描述
@@ -16,7 +16,7 @@ public class DerivedComponentAnnotationBootstrap {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext();
         context.setConfigLocation("classpath*:/META-INF/spring/context.xml");
         context.refresh();
-        ChineseNameRepository chineseNameRepository = (ChineseNameRepository) context.getBean("chineseNameRepository");
+        ChineseNameRepository chineseNameRepository = (ChineseNameRepository) context.getBean("chineseNameRepos");
         System.out.println("chineseNameRepository:\n" + chineseNameRepository.findAll());
     }
 }

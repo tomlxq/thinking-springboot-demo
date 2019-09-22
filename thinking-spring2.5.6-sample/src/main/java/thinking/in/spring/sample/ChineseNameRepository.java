@@ -1,6 +1,6 @@
-package thinking.spring256.com.sample;
+package thinking.in.spring.sample;
 
-import thinking.spring256.com.annotation.StringRepository;
+import thinking.in.spring.annotation.StringRepository;
 
 import java.util.Arrays;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.List;
  * @author TomLuo
  * @date 2019/9/22
  */
-@StringRepository
+@StringRepository(value = "chineseNameRepos")
 public class ChineseNameRepository {
     public List<String> findAll() {
         return Arrays.asList("张飞", "刘备", "关云长");

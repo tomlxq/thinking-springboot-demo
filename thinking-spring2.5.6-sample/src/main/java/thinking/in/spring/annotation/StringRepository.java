@@ -1,4 +1,4 @@
-package thinking.spring256.com.annotation;
+package thinking.in.spring.annotation;
 
 import org.springframework.stereotype.Component;
 
